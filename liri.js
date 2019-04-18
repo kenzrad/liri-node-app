@@ -6,8 +6,6 @@ var bands = require("./bands.js");
 var spotify= require("./spotify.js");
 var movies = require("./movies.js");
 
-
-
 // At the top of the `liri.js` file, add code to read and set any environment variables with the dotenv package:
 
 require("dotenv").config();
@@ -23,13 +21,10 @@ var keys = require("./keys.js");
     //omdb
     //do something else
 
-
-
     // `spotify-this-song`
         //     `node liri.js spotify-this-song '<song name here>'`
 
         // * This will show the following information about the song in your terminal/bash window
-
             //   * Artist(s)
             //   * The song's name
             //   * A preview link of the song from Spotify

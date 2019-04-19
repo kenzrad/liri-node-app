@@ -1,11 +1,14 @@
 function MovieAPI(userQuery) {
     var axios = require("axios");
+    var fs = require("fs");
     
     //chalk!
     var chalk = require('chalk');
     var error = chalk.bold.red;
     var link = chalk.underline.blue;
-
+    var responseText = chalk.green;
+    var titleText = chalk.bold.cyan;
+    var descText = chalk.cyan;
 
     if (userQuery.length > 0) {
         searchMovie(userQuery.join("+"));
@@ -29,35 +32,22 @@ function MovieAPI(userQuery) {
             }
 
             //print to the user
-            console.log(`  `)
-            console.log(`  `)
-            console.log(`  `)
-            console.log(`---------------MOVIE SEARCH----------------`)
-            console.log(`  `)
-            console.log(`  `)
-            console.log("---------------------------")
-            console.log(` `); 
-            console.log(`Movie: ${response.data.Title}
-            `);
-            //Plot of the movie.
-            console.log(`Plot: ${response.data.Plot}
-            `);
-            //Actors in the movie.
-            console.log(`Starring: ${response.data.Actors}
-            `)
-            //Ratings (IMDB and Rotten Tomatoes)
-            console.log(`Ratings: 
-                Rotten Tomatoes: ${tomatoes}
-                IMDB: ${response.data.imdbRating}
-            `)
-            //Country and year of production
-            console.log(`Filmed: ${response.data.Year}, ${response.data.Country}
-            `)
-            //Language of the movie.
-            console.log(`Filmed: ${response.data.Language}
-            `)
-            console.log(`---------------------------
-            
+            console.log(`
+            ${titleText('_______________________')}
+            ${titleText('                        ')}
+            ${titleText('      MOVIE SEARCH      ')}
+            ${titleText('_______________________')}
+            ${titleText('                        ')}
+            ${descText(`Movie: `)}${responseText(`${response.data.Title}`)}
+            ${descText(`Starring: `)}${responseText(`${response.data.Actors}`)}
+            ${descText(`Filmed: `)}${responseText(`${response.data.Year}, ${response.data.Country}`)}
+            ${descText(`Language: `)}${responseText(`${response.data.Language}`)}
+             
+            ${descText(`IMDB Rating: `)}${responseText(`${response.data.imdbRating}`)}
+            ${descText(`Rotten Tomatoes Rating: `)}${responseText(`${tomatoes}`)}
+             
+            ${descText(`Plot: `)}${responseText(`${response.data.Plot}`)}
+             
             `)
             } 
         );

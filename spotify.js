@@ -1,10 +1,12 @@
 function SpotifyAPI(userQuery) {
     //Read and set any environment variables with the dotenv package
-    require("dotenv").config();
     //import key.js file
+    require("dotenv").config();
     var keys = require("./keys.js");
     var Spotify = require('node-spotify-api');
     var spotify = new Spotify(keys.spotify);
+    var fs = require("fs");
+    
     
     //chalk!
     var chalk = require('chalk');
@@ -19,7 +21,6 @@ function SpotifyAPI(userQuery) {
     else {
         searchSong("the sign ace of base");
     }
-
     function searchSong(song) {
         spotify.search({ type: 'track', query: song, limit: '1' }, function(err, data) {
             if (err) {
@@ -35,12 +36,11 @@ function SpotifyAPI(userQuery) {
                 ${responseText(data.tracks.items[0].artists[0].name)}
                 ${responseText(data.tracks.items[0].album.name)}
                 ${link(data.tracks.items[0].href)}
-
             `);
+        
+        
         });
     };
-        
-    
 }
 module.exports = SpotifyAPI
 

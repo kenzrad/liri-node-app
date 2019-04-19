@@ -1,30 +1,52 @@
 var SpotifyAPI = require('./spotify.js');
 var BandAPI = require('./bands.js');
 var MovieAPI = require('./movies.js');
+var fs = require("fs");
+
+//chalk!
+var chalk = require('chalk');
+var error = chalk.bold.red;
+var link = chalk.underline.blue;
+var responseText = chalk.green;
+var titleText = chalk.bold.cyan;
 
 //User input variables
 var userCommand = process.argv[2]
 var userQuery = process.argv.slice(3);
+checkCommands(userCommand, userQuery);
 
 //Command cases
-switch (userCommand) {
-    case "spotify-this-song":
-        SpotifyAPI(userQuery);
-        break;
+function checkCommands(userCommand, userQuery) {
+    switch (userCommand) {
+        case "spotify-this-song":
+            SpotifyAPI(userQuery);
+            break;
 
-    case "concert-this":
-        BandAPI(userQuery);
-        break;
+        case "concert-this":
+            BandAPI(userQuery);
+            break;
 
-    case "movie-this":
-        MovieAPI(userQuery);
-        break;
-    
-    case "do-what-it-says":
-        // * Using the `fs` Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
-        // * It should run `spotify-this-song` for "I Want it That Way," as follows the text in `random.txt`.
-        // * Edit the text in random.txt to test out the feature for movie-this and concert-this.
-        break;
+        case "movie-this":
+            MovieAPI(userQuery);
+            break;
+        
+        case "do-what-it-says":
+            whatItSays();
+            break;
+    }
+}
+
+function whatItSays() {
+    fs.readFile("random.txt", "utf8", function(err, data){
+        if (err) {
+            return console.log(error('Error occurred: ' + err));
+        }
+        console.log(responseText("i read dis"));
+        data = data.split(",");
+        userCommand = data[0];
+        userQuery = data[1].split(" ");
+        checkCommands(userCommand, userQuery);
+    })
 }
 
 // ### BONUS

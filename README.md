@@ -1,6 +1,3 @@
-# liri-node-app
-A language interpretation and recognition CLI node app for entertainment
-
 # LIRI Bot
 
 ### Overview
@@ -10,6 +7,7 @@ LIRI is a **L**anguage **I**nterpretation and **R**ecognition **I**nterface comm
 ### Packages
 
 * [Node-Spotify-API](https://www.npmjs.com/package/node-spotify-api)
+sjaklsjls
 
 * [Axios](https://www.npmjs.com/package/axios)
 

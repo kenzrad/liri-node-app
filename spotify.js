@@ -5,6 +5,13 @@ function SpotifyAPI(userQuery) {
     var keys = require("./keys.js");
     var Spotify = require('node-spotify-api');
     var spotify = new Spotify(keys.spotify);
+    
+    //chalk!
+    var chalk = require('chalk');
+    var error = chalk.bold.red;
+    var link = chalk.underline.blue;
+    var responseText = chalk.green;
+    var titleText = chalk.bold.cyan;
 
     if (userQuery.length > 0) {
         searchSong(userQuery.join(" "));
@@ -16,17 +23,20 @@ function SpotifyAPI(userQuery) {
     function searchSong(song) {
         spotify.search({ type: 'track', query: song, limit: '1' }, function(err, data) {
             if (err) {
-            return console.log('Error occurred: ' + err);
+            return console.log(error('Error occurred: ' + err));
             }
-            console.log(/n/)
-                //Song name
-                console.log(data.tracks.items[0].name);    
-                //Artist(s)
-                console.log(data.tracks.items[0].artists[0].name);    
-                //Album
-                console.log(data.tracks.items[0].album.name); 
-                //Song preview
-                console.log(data.tracks.items[0].href); 
+            console.log(`  
+                ${titleText('_______________________')}
+                ${titleText('                        ')}
+                ${titleText('    SPOTIFY SEARCH    ')}
+                ${titleText('_______________________')}
+                ${titleText('                        ')}
+                ${responseText(data.tracks.items[0].name)}
+                ${responseText(data.tracks.items[0].artists[0].name)}
+                ${responseText(data.tracks.items[0].album.name)}
+                ${link(data.tracks.items[0].href)}
+
+            `);
         });
     };
         

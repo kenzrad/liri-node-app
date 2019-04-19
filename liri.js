@@ -2,12 +2,11 @@ var SpotifyAPI = require('./spotify.js');
 var BandAPI = require('./bands.js');
 var MovieAPI = require('./movies.js');
 
-////Command////
-//what the user what's us to do (DO DIS!)
+//User input variables
 var userCommand = process.argv[2]
-//what the user wants to query
 var userQuery = process.argv.slice(3);
 
+//Command cases
 switch (userCommand) {
     case "spotify-this-song":
         SpotifyAPI(userQuery);

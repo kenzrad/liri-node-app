@@ -38,7 +38,6 @@ function SpotifyAPI(userQuery) {
                 ${link(data.tracks.items[0].href)}
             `);
         
-        
         });
     };
 }

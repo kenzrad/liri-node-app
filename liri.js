@@ -1,13 +1,6 @@
-
-////Spotify////
-//Read and set any environment variables with the dotenv package
-require("dotenv").config();
-//import key.js file
-var keys = require("./keys.js");
-var Spotify = require('node-spotify-api');
-var Spotify = require('./spotify.js');
-var spotify = new Spotify(keys.spotify);
-
+var SpotifyAPI = require('./spotify.js');
+var BandAPI = require('./bands.js');
+var MovieAPI = require('./movies.js');
 
 ////Command////
 //what the user what's us to do (DO DIS!)
@@ -15,29 +8,25 @@ var userCommand = process.argv[2]
 //what the user wants to query
 var userQuery = process.argv.slice(3);
 
-// console.log(userQuery);
+switch (userCommand) {
+    case "spotify-this-song":
+        SpotifyAPI(userQuery);
+        break;
 
+    case "concert-this":
+        BandAPI(userQuery);
+        break;
 
-if (process.argv[2] === "spotify-this-song") {
-    spotify.songSearch(process.argv.slice(3));
-}
-
-// You should then be able to access your keys information like so
-
-
-    // var bandsInTown = new bandsInTown(keys.spotify);
-
-    // `node liri.js spotify-this-song '<song name here>'`
-
+    case "movie-this":
+        MovieAPI(userQuery);
+        break;
     
-    //`node liri.js movie-this '<movie name here>'`
-    //do something else
-
-    // `do-what-it-says`
+    case "do-what-it-says":
         // * Using the `fs` Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
         // * It should run `spotify-this-song` for "I Want it That Way," as follows the text in `random.txt`.
         // * Edit the text in random.txt to test out the feature for movie-this and concert-this.
-
+        break;
+}
 
 // ### BONUS
 

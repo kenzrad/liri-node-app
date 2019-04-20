@@ -1,20 +1,15 @@
 # LIRI Bot
 
-
-### Overview
+## Overview
 
 LIRI is a **L**anguage **I**nterpretation and **R**ecognition **I**nterface command line node app that takes in parameters and gives the user back data. 
 
-### Packages
+## Packages
 
 * [Node-Spotify-API](https://www.npmjs.com/package/node-spotify-api) - Used to search for song data
-
 * [Axios](https://www.npmjs.com/package/axios) - Used to access the Bands-in-Town and OMDB APIs to look up concert and movie data (respectively)
-
 * [Moment](https://www.npmjs.com/package/moment) - Used to convert date formats for the Bands-in-Town API
-
 * [DotEnv](https://www.npmjs.com/package/dotenv) - Used to store secrets for the Spotify API
-
 * [Chalk](https://www.npmjs.com/package/chalk#styles) - Used to style up the console log to make things a bit more interesting
 
 ## DotEnv and Key Files
@@ -50,12 +45,12 @@ LIRI accepts four commands from the user:
         * Venue location
         * Date of the Event (use moment to format this as "MM/DD/YYYY")
         ```
+        ![concert-1]
+        (https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/concert-artist-1.png)
 
-![concert-1]
-(https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/concert-artist-1.png)
-
-![concert-2]
-(https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/concert-artist-2.png)
+        * If there isn't any upcoming events for the given artist, an error message will show:
+        ![concert-2]
+        (https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/concert-artist-2.png)
 
    * `node liri.js spotify-this-song '<song name here>'` - Searches the Spotify Node API for song information and returns the following:
         ```
@@ -64,10 +59,8 @@ LIRI accepts four commands from the user:
         * A preview link of the song from Spotify
         * The album that the song is from
         ```
-for example:
-
-![spotify]
-(https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/spotify-song-1.png)
+    ![spotify]
+    (https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/spotify-song-1.png)
 
 
 Note: if no song is provided then your program will default to "The Sign" by Ace of Base.
@@ -90,45 +83,9 @@ Note: if no song is provided then your program will default to "The Sign" by Ace
 ![movie-title-2]
 (https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/movie-title-2.png)
 
-   * `do-what-it-says`
-
-
-Create and use a standard GitHub repository. As this is a CLI App, it cannot be deployed to GitHub pages or Heroku. This time you'll need to include screenshots, a GIF, and/or a video showing us that you have the app working with no bugs. You can include these screenshots/GIFs or a link to a video in a `README.md` file.
-
-* Include screenshots (or a GIF/Video) of the typical user flow of your application. Make sure to include the use of Spotify, Bands in Town, and OMDB.
-
-* Include any other screenshots you deem necessary to help someone who has never been introduced to your application understand the purpose and function of it. This is how you will communicate to potential employers/other developers in the future what you built and why, and to show how it works.
-
-
-
-3. `node liri.js movie-this '<movie name here>'`
-
-   * This will output the following information to your terminal/bash window:
-
-     ```
-       * Title of the movie.
-       * Year the movie came out.
-       * IMDB Rating of the movie.
-       * Rotten Tomatoes Rating of the movie.
-       * Country where the movie was produced.
-       * Language of the movie.
-       * Plot of the movie.
-       * Actors in the movie.
-     ```
-
-   * If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.'
-
-     * If you haven't watched "Mr. Nobody," then you should: <http://www.imdb.com/title/tt0485947/>
-
-     * It's on Netflix!
-
-   * You'll use the `axios` package to retrieve data from the OMDB API. Like all of the in-class activities, the OMDB API requires an API key. You may use `trilogy`.
-
-4. `node liri.js do-what-it-says`
-
-   * Using the `fs` Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
-
-     * It should run `spotify-this-song` for "I Want it That Way," as follows the text in `random.txt`.
-
-     * Edit the text in random.txt to test out the feature for movie-this and concert-this.
-
+   * `node liri.js do-what-it-says`
+        ```
+        * Using the `fs` Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
+        * It should run `spotify-this-song` for "I Want it That Way," as follows the text in `random.txt`.
+        * Edit the text in random.txt to test out the feature for movie-this and concert-this.
+        ```

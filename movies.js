@@ -54,7 +54,7 @@ function MovieAPI(userQuery) {
              
             `)
 
-            var searchedMovie = `OMDB search: Title: ${response.data.Title}, Actors: ${response.data.Actors}, Year: ${esponse.data.Year}, Country: ${response.data.Country}, Language: ${response.data.Language}, IMDB Rating: ${response.data.imdbRating}, Rotten Tomatoes Rating: ${tomatoes}, Plot: ${response.data.Plot} \n`
+            var searchedMovie = `OMDB search: Title: ${response.data.Title}, Actors: ${response.data.Actors}, Year: ${response.data.Year}, Country: ${response.data.Country}, Language: ${response.data.Language}, IMDB Rating: ${response.data.imdbRating}, Rotten Tomatoes Rating: ${tomatoes}, Plot: ${response.data.Plot} \n`
             fs.appendFile("log.txt", `${now}: ${searchedMovie}`, function(err) {
                 if (err) {
                     return console.log(error('Error occurred: ' + err));

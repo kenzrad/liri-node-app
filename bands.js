@@ -20,6 +20,11 @@ function BandAPI(userQuery) {
     else {
         //if the user doesn't choose a movie
         console.log(error("Please choose an artist!"));
+        fs.appendFile("log.txt", `${now}: no artist selected`, function(err) {
+            if (err) {
+                return console.log(error('Error occurred: ' + err));
+            }
+        }) 
     }
 
     function searchConcerts(artist) {
@@ -41,13 +46,20 @@ function BandAPI(userQuery) {
                 response.data.forEach(concert => {
                 // converts date with moment to MM/DD/YYYY
                 var date = moment(concert.datetime.slice(0, 10), "YYYY-MM-DD").format("MM/DD/YYYY");
-                // consoles
-                console.log(`
-                ${descText(`Venue: `)}${responseText(`${concert.venue.name}`)}
-                ${descText(`Location: `)}${responseText(`${concert.venue.city}, ${concert.venue.region}`)}
-                ${descText(`Date: `)}${responseText(`${date}`)} 
+                    // consoles
+                    console.log(`
+                    ${descText(`Venue: `)}${responseText(`${concert.venue.name}`)}
+                    ${descText(`Location: `)}${responseText(`${concert.venue.city}, ${concert.venue.region}`)}
+                    ${descText(`Date: `)}${responseText(`${date}`)} 
 
-                ${descText(`-----------------------`)}`)
+                    ${descText(`-----------------------`)}`)
+
+                    var searchedConcert = `Bands-in-Town search: Artist: ${displayArtist}, Venue: ${concert.venue.name}, Location: ${concert.venue.city}, ${concert.venue.region}, Date: ${date} \n`
+                    fs.appendFile("log.txt", `${now}: ${searchedConcert}`, function(err) {
+                        if (err) {
+                            return console.log(error('Error occurred: ' + err));
+                        }
+                    }) 
                 })
             } 
         });

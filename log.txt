@@ -1,2 +1,0 @@
-Fri Apr 19 2019 21:57:28 GMT-0400: /usr/local/Cellar/node/11.9.0/bin/node,/Users/Kenzrad/Bootcamp/ass10/liri-node-app/liri.js,spotify-this-song,all,the,small,things 
-Fri Apr 19 2019 21:57:28 GMT-0400: Spotify search: All The Small Things, blink-182, Enema Of The State, https://api.spotify.com/v1/tracks/2m1hi0nfMR9vdGC8UcrnwU 

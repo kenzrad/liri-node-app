@@ -60,7 +60,7 @@ LIRI accepts four commands from the user:
         ```
 for example:
 ![spotify example 1]
-(https://github.com/kenzrad/liri-node-app/blob/master/screen-prints/spotify-song-1.png?raw=true)
+(https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/spotify-song-1.png)
 
 Note: if no song is provided then your program will default to "The Sign" by Ace of Base.
 

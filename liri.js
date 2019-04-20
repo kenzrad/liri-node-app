@@ -10,9 +10,20 @@ var link = chalk.underline.blue;
 var responseText = chalk.green;
 var titleText = chalk.bold.cyan;
 
+//moment!
+var moment = require("moment");
+var now = moment();
+
 //User input variables
 var userCommand = process.argv[2]
 var userQuery = process.argv.slice(3);
+fs.appendFile("log.txt", `${now}: ${process.argv} \n`, function(err) {
+    if (err) {
+        return console.log(error('Error occurred: ' + err));
+    }
+}) 
+
+
 checkCommands(userCommand, userQuery);
 
 //Command cases

@@ -40,6 +40,7 @@ You will need to generate your own `.env` and `keys.js` files to store your spot
 
 LIRI accepts four commands from the user:
    * `node liri.js concert-this <artist/band name here>` - Searches the Bands-in-Town API for concert dates for the given artist. It will return the following information:
+
         ```
         * Name of the venue
         * Venue location
@@ -48,11 +49,13 @@ LIRI accepts four commands from the user:
         ![concert-1]
         (https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/concert-artist-1.png)
 
-        * If there isn't any upcoming events for the given artist, an error message will show:
+    * If there isn't any upcoming events for the given artist, an error message will show:
+
         ![concert-2]
         (https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/concert-artist-2.png)
 
    * `node liri.js spotify-this-song '<song name here>'` - Searches the Spotify Node API for song information and returns the following:
+
         ```
         * Artist(s)
         * The song's name
@@ -67,6 +70,7 @@ Note: if no song is provided then your program will default to "The Sign" by Ace
 
 
    * `node liri.js movie-this '<movie name here>'` - Searches the OMDB API for Movie information
+
         ```
         * Title of the movie.
         * Year the movie came out.
@@ -77,15 +81,16 @@ Note: if no song is provided then your program will default to "The Sign" by Ace
         * Plot of the movie.
         * Actors in the movie.
         ```
-![movie-title-1]
-(https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/movie-title-1.png)
+        ![movie-title-1]
+        (https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/movie-title-1.png)
 
-![movie-title-2]
-(https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/movie-title-2.png)
+        ![movie-title-2]
+        (https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/movie-title-2.png)
 
-   * `node liri.js do-what-it-says`
-        ```
-        * Using the `fs` Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
-        * It should run `spotify-this-song` for "I Want it That Way," as follows the text in `random.txt`.
-        * Edit the text in random.txt to test out the feature for movie-this and concert-this.
-        ```
+   * `node liri.js do-what-it-says` 
+        This command will use the `fs` Node package to read a `random.txt` file to call one of LIRI's commands
+
+
+## Log File
+
+All commands sent to LIRI will be logged in the log.txt file. You can see past search responses along with any errors encountered in this file (along with timestamps, brought to you by moment.js)

@@ -7,7 +7,10 @@ function SpotifyAPI(userQuery) {
     var spotify = new Spotify(keys.spotify);
     var fs = require("fs");
     
-    
+    //moment!
+    var moment = require("moment");
+    var now = moment();
+
     //chalk!
     var chalk = require('chalk');
     var error = chalk.bold.red;
@@ -24,7 +27,12 @@ function SpotifyAPI(userQuery) {
     function searchSong(song) {
         spotify.search({ type: 'track', query: song, limit: '1' }, function(err, data) {
             if (err) {
-            return console.log(error('Error occurred: ' + err));
+                fs.appendFile("log.txt", `${now}: Error occured: ${err}`, function(err) {
+                    if (err) {
+                        return console.log(error('Error occurred: ' + err));
+                    }
+                }) 
+                return console.log(error('Error occurred: ' + err));
             }
             console.log(`  
                 ${titleText('_______________________')}
@@ -37,7 +45,12 @@ function SpotifyAPI(userQuery) {
                 ${responseText(data.tracks.items[0].album.name)}
                 ${link(data.tracks.items[0].href)}
             `);
-        
+            var searchedSong = `Spotify search: ${data.tracks.items[0].name}, ${data.tracks.items[0].artists[0].name}, ${data.tracks.items[0].album.name}, ${data.tracks.items[0].href} \n`
+            fs.appendFile("log.txt", `${now}: ${searchedSong}`, function(err) {
+                if (err) {
+                    return console.log(error('Error occurred: ' + err));
+                }
+            }) 
         });
     };
 }

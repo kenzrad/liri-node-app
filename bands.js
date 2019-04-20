@@ -1,7 +1,10 @@
 function BandAPI(userQuery) {
-    var moment = require("moment");
     var axios = require("axios");
     var fs = require("fs");
+
+    //moment!
+    var moment = require("moment");
+    var now = moment();
 
     //chalk!
     var chalk = require('chalk');

@@ -1,6 +1,10 @@
 function MovieAPI(userQuery) {
     var axios = require("axios");
     var fs = require("fs");
+
+    //moment!
+    var moment = require("moment");
+    var now = moment();
     
     //chalk!
     var chalk = require('chalk');
@@ -49,8 +53,15 @@ function MovieAPI(userQuery) {
             ${descText(`Plot: `)}${responseText(`${response.data.Plot}`)}
              
             `)
-            } 
-        );
+
+            var searchedMovie = `OMDB search: Title: ${response.data.Title}, Actors: ${response.data.Actors}, Year: ${esponse.data.Year}, Country: ${response.data.Country}, Language: ${response.data.Language}, IMDB Rating: ${response.data.imdbRating}, Rotten Tomatoes Rating: ${tomatoes}, Plot: ${response.data.Plot} \n`
+            fs.appendFile("log.txt", `${now}: ${searchedMovie}`, function(err) {
+                if (err) {
+                    return console.log(error('Error occurred: ' + err));
+                }
+            }) 
+
+        });
     }
 }
 

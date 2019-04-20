@@ -1,4 +1,8 @@
 # LIRI Bot
+![Image of spotify example 1]
+(https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/spotify-song-1.png)
+![Image of spotify example 1]
+(screen-prints/spotify-song-1.png)
 
 ### Overview
 
@@ -60,10 +64,7 @@ LIRI accepts four commands from the user:
         ```
 for example:
 
-![Image of spotify example 1]
-(https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/spotify-song-1.png)
-![Image of spotify example 1]
-(./screen-prints/spotify-song-1.png)
+
 
 Note: if no song is provided then your program will default to "The Sign" by Ace of Base.
 

@@ -1,0 +1,8 @@
+Fri Apr 19 2019 23:13:58 GMT-0400: /usr/local/Cellar/node/11.9.0/bin/node,/Users/Kenzrad/Bootcamp/ass10/liri-node-app/liri.js,concert-this,failure 
+Fri Apr 19 2019 23:13:58 GMT-0400: Bands-in-Town search: Artist: FAILURE, Venue: McMenamins Crystal Ballroom, Location: Portland, OR, Date: 04/17/2019 
+Fri Apr 19 2019 23:13:58 GMT-0400: Bands-in-Town search: Artist: FAILURE, Venue: Venue Nightclub, Location: Vancouver, , Date: 04/18/2019 
+Fri Apr 19 2019 23:13:58 GMT-0400: Bands-in-Town search: Artist: FAILURE, Venue: Strummer's Bar & Grill, Location: Fresno, CA, Date: 04/21/2019 
+Fri Apr 19 2019 23:13:58 GMT-0400: Bands-in-Town search: Artist: FAILURE, Venue: Ace of Spades, Location: Sacramento, CA, Date: 04/22/2019 
+Fri Apr 19 2019 23:13:58 GMT-0400: Bands-in-Town search: Artist: FAILURE, Venue: The Fillmore, Location: Sf, CA, Date: 04/23/2019 
+Fri Apr 19 2019 23:13:58 GMT-0400: Bands-in-Town search: Artist: FAILURE, Venue: The Fonda Theatre, Location: Los Angeles, CA, Date: 04/24/2019 
+Fri Apr 19 2019 23:13:58 GMT-0400: Bands-in-Town search: Artist: FAILURE, Venue: El Corazón, Location: Seattle, WA, Date: 04/19/2019 

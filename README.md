@@ -47,7 +47,7 @@ LIRI accepts four commands from the user:
         * Date of the Event (use moment to format this as "MM/DD/YYYY")
         ```
         ![concert-1]
-        (https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/concert-artist-1.png)
+        <img src="https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/concert-artist-1.png" />
 
     * If there isn't any upcoming events for the given artist, an error message will show:
 

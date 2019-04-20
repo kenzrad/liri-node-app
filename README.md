@@ -82,6 +82,7 @@ Note: if no song is provided then your program will default to "The Sign" by Ace
         
         <img src="https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/movie-title-1.png" />
 
+        *If the user doesn't select a movie, LIRI will show details for "Mr. Nobody!"
         
         <img src="https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/movie-title-2.png" />
 

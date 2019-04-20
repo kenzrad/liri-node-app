@@ -58,10 +58,11 @@ LIRI accepts four commands from the user:
         * A preview link of the song from Spotify
         * The album that the song is from
         ```
-    for example:
-    ![spotify example 1](https://github.com/kenzrad/liri-node-app/blob/master/screen-prints/spotify-song-1.png?raw=true)
-     
-     * Note: if no song is provided then your program will default to "The Sign" by Ace of Base.
+for example:
+![spotify example 1]
+(https://github.com/kenzrad/liri-node-app/blob/master/screen-prints/spotify-song-1.png?raw=true)
+
+Note: if no song is provided then your program will default to "The Sign" by Ace of Base.
 
 
    * `node liri.js movie-this '<movie name here>'` - Searches the OMDB API for Movie information

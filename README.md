@@ -94,3 +94,9 @@ Note: if no song is provided then your program will default to "The Sign" by Ace
 ## Log File
 
 All commands sent to LIRI will be logged in the log.txt file. You can see past search responses along with any errors encountered in this file (along with timestamps, brought to you by moment.js)
+
+## Functionality
+
+See the full functionality here:
+        ![movie!]
+        (https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/functionality.mov)

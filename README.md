@@ -46,13 +46,11 @@ LIRI accepts four commands from the user:
         * Venue location
         * Date of the Event (use moment to format this as "MM/DD/YYYY")
         ```
-        ![concert-1]
         <img src="https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/concert-artist-1.png" />
 
     * If there isn't any upcoming events for the given artist, an error message will show:
-
-        ![concert-2]
-        (https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/concert-artist-2.png)
+    
+        <img src="https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/concert-artist-2.png" />
 
    * `node liri.js spotify-this-song '<song name here>'` - Searches the Spotify Node API for song information and returns the following:
 
@@ -62,8 +60,8 @@ LIRI accepts four commands from the user:
         * A preview link of the song from Spotify
         * The album that the song is from
         ```
-    ![spotify]
-    (https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/spotify-song-1.png)
+ 
+        <img src="https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/spotify-song-1.png" />
 
 
 Note: if no song is provided then your program will default to "The Sign" by Ace of Base.
@@ -81,11 +79,11 @@ Note: if no song is provided then your program will default to "The Sign" by Ace
         * Plot of the movie.
         * Actors in the movie.
         ```
-        ![movie-title-1]
-        (https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/movie-title-1.png)
+        
+        <img src="https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/movie-title-1.png" />
 
-        ![movie-title-2]
-        (https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/movie-title-2.png)
+        
+        <img src="https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/movie-title-2.png" />
 
    * `node liri.js do-what-it-says` 
         This command will use the `fs` Node package to read a `random.txt` file to call one of LIRI's commands

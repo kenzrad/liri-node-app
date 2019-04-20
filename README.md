@@ -1,6 +1,5 @@
 # LIRI Bot
-[![Image of spotify example 1]
-(https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/spotify-song-1.png)]
+
 
 ### Overview
 
@@ -52,6 +51,11 @@ LIRI accepts four commands from the user:
         * Date of the Event (use moment to format this as "MM/DD/YYYY")
         ```
 
+![concert-1]
+(https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/concert-artist-1.png)
+
+![concert-2]
+(https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/concert-artist-2.png)
 
    * `node liri.js spotify-this-song '<song name here>'` - Searches the Spotify Node API for song information and returns the following:
         ```
@@ -62,6 +66,8 @@ LIRI accepts four commands from the user:
         ```
 for example:
 
+![spotify]
+(https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/spotify-song-1.png)
 
 
 Note: if no song is provided then your program will default to "The Sign" by Ace of Base.
@@ -78,6 +84,11 @@ Note: if no song is provided then your program will default to "The Sign" by Ace
         * Plot of the movie.
         * Actors in the movie.
         ```
+![movie-title-1]
+(https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/movie-title-1.png)
+
+![movie-title-2]
+(https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/movie-title-2.png)
 
    * `do-what-it-says`
 

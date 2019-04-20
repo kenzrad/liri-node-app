@@ -7,6 +7,9 @@ function BandAPI(userQuery) {
     var chalk = require('chalk');
     var error = chalk.bold.red;
     var link = chalk.underline.blue;
+    var responseText = chalk.green;
+    var titleText = chalk.bold.cyan;
+    var descText = chalk.cyan;
 
     if (userQuery.length > 0) {
         searchConcerts(userQuery.join("+"));
@@ -24,26 +27,25 @@ function BandAPI(userQuery) {
                 console.log(error(`I can't find any upcoming events for ${artist}`));
             }
             else {
-                console.log(`  `)
-                console.log(`  `)
-                console.log(`  `)
-                console.log(`---------------${artist.toUpperCase()} EVENTS----------------`)
-                console.log(`  `)
-                console.log(`  `)
-                console.log("---------------------------")
-                    response.data.forEach(concert => {
-                        // converts date with moment to MM/DD/YYYY
-                        var date = moment(concert.datetime.slice(0, 10), "YYYY-MM-DD").format("MM/DD/YYYY");
+                var displayArtist = artist.split("+").join(" ").toUpperCase();
+                //print to the user
+                console.log(`
+                ${titleText('_______________________')}
+                ${titleText('                        ')}
+                ${titleText(`  ${displayArtist} EVENTS  `)}
+                ${titleText('_______________________')}
+                `)
+                response.data.forEach(concert => {
+                // converts date with moment to MM/DD/YYYY
+                var date = moment(concert.datetime.slice(0, 10), "YYYY-MM-DD").format("MM/DD/YYYY");
+                // consoles
+                console.log(`
+                ${descText(`Venue: `)}${responseText(`${concert.venue.name}`)}
+                ${descText(`Location: `)}${responseText(`${concert.venue.city}, ${concert.venue.region}`)}
+                ${descText(`Date: `)}${responseText(`${date}`)} 
 
-                        // consoles
-                        console.log(`Venue: ${concert.venue.name}`)
-                        console.log(`Location: ${concert.venue.city}, ${concert.venue.region}`)
-                        console.log(`Date: ${date}`)
-                        console.log("-----------------------------------------------------")
-                    })
-                console.log(`  `)
-                console.log(`  `)
-                console.log(`  `)
+                ${descText(`-----------------------`)}`)
+                })
             } 
         });
     }

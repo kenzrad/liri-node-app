@@ -50,6 +50,7 @@ LIRI accepts four commands from the user:
         * Date of the Event (use moment to format this as "MM/DD/YYYY")
         ```
 
+
    * `node liri.js spotify-this-song '<song name here>'` - Searches the Spotify Node API for song information and returns the following:
         ```
         * Artist(s)
@@ -57,6 +58,8 @@ LIRI accepts four commands from the user:
         * A preview link of the song from Spotify
         * The album that the song is from
         ```
+    for example:
+    ![spotify example 1](/screen-prints/spotify-song-1.png)
      
      * Note: if no song is provided then your program will default to "The Sign" by Ace of Base.
 

@@ -41,7 +41,6 @@ function whatItSays() {
         if (err) {
             return console.log(error('Error occurred: ' + err));
         }
-        console.log(responseText("i read dis"));
         data = data.split(",");
         userCommand = data[0];
         userQuery = data[1].split(" ");

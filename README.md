@@ -1,8 +1,6 @@
 # LIRI Bot
 ![Image of spotify example 1]
-(https://raw.githubusercontent.com/kenzrad/liri-node-app/master/screen-prints/spotify-song-1.png)
-![Image of spotify example 1]
-(screen-prints/spotify-song-1.png)
+(screen-prints/spotify-song-1.png?raw=true)
 
 ### Overview
 

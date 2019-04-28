@@ -4,7 +4,7 @@
 
 LIRI is a **L**anguage **I**nterpretation and **R**ecognition **I**nterface command line node app that takes in parameters and gives the user back data. 
 
-![movie!](https://www.youtube.com/embed/ib95R-dgW_4)
+[![IMAGE ALT TEXT HERE](https://www.youtube.com/watch?v=ib95R-dgW_4&feature=youtu.be.jpg)](https://www.youtube.com/watch?v=ib95R-dgW_4&feature=youtu.be)
 
 ## Packages
 
